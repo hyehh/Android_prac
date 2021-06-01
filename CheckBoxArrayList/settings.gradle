@@ -1,0 +1,2 @@
+rootProject.name = "CheckBoxArrayList"
+include ':app'
