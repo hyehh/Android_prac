@@ -1,0 +1,2 @@
+rootProject.name = "DialogMulAdd1"
+include ':app'

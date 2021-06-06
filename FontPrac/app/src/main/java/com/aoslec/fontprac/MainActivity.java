@@ -1,5 +1,6 @@
 package com.aoslec.fontprac;
 
+import androidx.annotation.Dimension;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -22,15 +23,24 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.tv);
 
         btnSmall.setOnClickListener(onClickListener);
-        btnSmall.setOnClickListener(onClickListener);
+        btnLarge.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            int size = 0;
             switch (v.getId()){
                 case R.id.btnSmall:
-
+                    size = (int) textView.getTextSize();
+                    size -= 1;
+                    textView.setTextSize(Dimension.DP, size);
+                    break;
+                case R.id.btnLarge:
+                    size = (int) textView.getTextSize();
+                    size += 1;
+                    textView.setTextSize(Dimension.DP, size);
+                    break;
             }
         }
     };
