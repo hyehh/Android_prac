@@ -1,0 +1,2 @@
+rootProject.name = "CustomAdapterViewPrac1"
+include ':app'
