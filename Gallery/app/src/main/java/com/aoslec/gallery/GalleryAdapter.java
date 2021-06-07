@@ -1,6 +1,7 @@
 package com.aoslec.gallery;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ public class GalleryAdapter extends BaseAdapter {
 
     private Context mContext = null;
     private int[] posterID = null;
+    private LayoutInflater inflater = null;
 
     public GalleryAdapter(Context mContext, int[] posterID) {
         this.mContext = mContext;
@@ -50,8 +52,8 @@ public class GalleryAdapter extends BaseAdapter {
         imageView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                // View dialogView = View.inflate(mContext, R.layout.activity_main, null);
-                ImageView ivPoster = v.findViewById(R.id.ivPoster);
+                View view = inflater.inflate(R.layout.activity_main, parent, false);
+                ImageView ivPoster = view.findViewById(R.id.ivPoster);
                 ivPoster.setScaleType(ImageView.ScaleType.FIT_CENTER);
                 ivPoster.setImageResource(posterID[position]);
                 return false;

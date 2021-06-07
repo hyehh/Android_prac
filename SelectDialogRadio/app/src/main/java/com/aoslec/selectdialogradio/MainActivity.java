@@ -26,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // mSelect = -1이면 초기값 빈값 설정됨
+                mSelect = -1;
+                // mSelect = 0이면 첫 번째 라디오 버튼 설정됨
+                // mSelect = 0;
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle("음식을 선택하세요")
                         .setIcon(R.mipmap.ic_launcher)

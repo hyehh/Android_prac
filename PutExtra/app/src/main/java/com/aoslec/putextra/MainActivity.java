@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn_Main2:
+                    // 같은 scope안에 있기 때문에 굳이 한 번 더 선언해주지 않아도 가능!
                     intent = new Intent(MainActivity.this, ThirdActivity.class);
                     intent.putExtra("Id", "admin");
                     intent.putExtra("Pw", 2222);

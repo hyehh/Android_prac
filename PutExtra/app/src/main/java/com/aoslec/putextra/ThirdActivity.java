@@ -32,6 +32,7 @@ public class ThirdActivity extends AppCompatActivity {
         btn_Third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Scope안에 있지만 여기에서는 위에 선언해준 Intent를 아예 모른다!
                 Intent intent = new Intent();
                 intent.putExtra("result", "aaaa");
                 setResult(ResultV, intent);

@@ -14,8 +14,8 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private int[] posterID = null;
-    private MyGalleryAdapter adapter = null;
-    //private GalleryAdapter adapter = null;
+    //private MyGalleryAdapter adapter = null;
+    private GalleryAdapter adapter = null;
     private Gallery gallery = null;
 
     @Override
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         posterID = new int[]{R.drawable.mov01, R.drawable.mov02, R.drawable.mov03, R.drawable.mov04, R.drawable.mov05, R.drawable.mov06, R.drawable.mov07, R.drawable.mov08, R.drawable.mov09, R.drawable.mov10
                             };
 
-        //adapter = new GalleryAdapter(MainActivity.this, posterID);
-        adapter = new MyGalleryAdapter(this);
+        adapter = new GalleryAdapter(MainActivity.this, posterID);
+        //adapter = new MyGalleryAdapter(this);
 
         gallery = findViewById(R.id.gallery1);
         gallery.setAdapter(adapter);
