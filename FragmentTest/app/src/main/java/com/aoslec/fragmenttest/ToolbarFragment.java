@@ -32,7 +32,9 @@ public class ToolbarFragment extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         try{
+            activityCallback = (ToolbarListener) context;
+        }catch(Exception e){
 
-        }catch
+        }
     }
 }
