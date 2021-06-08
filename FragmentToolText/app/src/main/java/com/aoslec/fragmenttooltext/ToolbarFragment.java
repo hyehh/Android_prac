@@ -18,6 +18,7 @@ import android.widget.SeekBar;
 public class ToolbarFragment extends Fragment {
 
     // ToolBarListener의 기능들을 activityCallback 라고 재정의할꺼야
+    // 기본적으로 정의되는 게 있는데 우리가 따로 갖다 써야 하니까 따로 정의해주겠다!
     ToolBarListener activityCallback;
 
     EditText editText = null;
