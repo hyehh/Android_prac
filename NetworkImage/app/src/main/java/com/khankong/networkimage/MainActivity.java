@@ -10,7 +10,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     final static String TAG = "MainActivity";
-    String urlAddr = "http://192.168.0.78:8080/test/img_0214.jpg";
+    String urlAddr = "http://192.168.0.128:8080/test/20210615102342739.jpg";
     Button button;
     ImageView imageView;
 
